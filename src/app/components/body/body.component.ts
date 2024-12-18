@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faChevronRight, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faCalendar } from '@fortawesome/free-regular-svg-icons';
+
 
 @Component({
   selector: 'app-body',
@@ -12,4 +13,5 @@ import { faCalendar } from '@fortawesome/free-regular-svg-icons';
 export class BodyComponent {
   faMapMarkerAlt = faMapMarkerAlt;
   faCalendar = faCalendar;
+  faChevronRight = faChevronRight;
 }
