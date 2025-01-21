@@ -1,79 +1,20 @@
 .home-screen {
-  margin-top: 120px;
+  margin-top: 140px;
   margin-bottom: 30px;
 }
 
-// left section start
-.card-custom {
-  border: none;
-  border-radius: 30px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  width: 95%;
-  height: 430px;
-}
 
-.header-text {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #212529;
-}
-
-.nav-item-custom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 10px;
-  padding: 8px 16px;
-  background-color: #d3ecff;
-  color: #212529;
-  font-weight: 500;
-  transition: all 0.2s ease-in;
-}
-
-.nav-item-custom:hover {
-  background-color: #c2dff5;
-  cursor: pointer;
-}
-
-.nav-item-arrow {
-  background-color: #fff;
-  border-radius: 12px;
-  width: 50px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.list-item {
-  color: #91979c;
-  font-size: 1rem;
-  padding: 8px 16px;
-  transition: all 0.2s ease;
-}
-
-.list-item:hover {
-  cursor: pointer;
-  color: #36383a;
-}
-
-hr {
-  margin: 0.5rem 0;
-  opacity: 0.3;
-}
-// left section end
 
 // middle section start
 .card-1 {
-  border: 1px solid #52769a;
+  border: 1px solid #000000;
   border-radius: 40px;
   transition: all 0.3s ease;
 }
 
-// .card-1:hover {
-//   transform: scale(1.03);
-// }
+.card-1:hover {
+  transform: scale(1.02);
+}
 
 .sqr-img {
   width: 50%;
@@ -117,9 +58,9 @@ hr {
   transition: all 0.3s ease;
 }
 
-// .travel-card:hover {
-//   transform: scale(1.04);
-// }
+.travel-card:hover {
+  transform: scale(1.03);
+}
 
 .travel-card img {
   width: 100%;
