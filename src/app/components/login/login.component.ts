@@ -19,7 +19,7 @@ export class LoginComponent {
 
   loginForm: FormGroup = new FormGroup({
     role: new FormControl('0'),
-    username: new FormControl('', [
+    email: new FormControl('', [
       Validators.required,
       Validators.minLength(3),
       Validators.maxLength(20),
