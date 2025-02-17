@@ -18,9 +18,10 @@ export class LoginComponent {
   private readonly _AuthService = inject(AuthService);
 
   loginForm: FormGroup = new FormGroup({
-    role: new FormControl('0'),
+    role: new FormControl('Admin'),
     email: new FormControl('', [
       Validators.required,
+      Validators.email,
     ]),
     password: new FormControl('', [
       Validators.required,
