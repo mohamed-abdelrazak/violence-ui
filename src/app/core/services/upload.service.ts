@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class UploadService {
   // url goes here 
-  private apiUrl = 'http://localhost:4000/upload';
+  private apiUrl = 'http://localhost:4000/predict/video';
 
   constructor(private http: HttpClient) {}
 
@@ -18,6 +18,7 @@ export class UploadService {
     return this.http.post(this.apiUrl, formData, {
       reportProgress: true,
       observe: 'events',
+      responseType: 'blob',
     });
   }
 }

@@ -10,6 +10,23 @@
     <p>Progress: {{ uploadProgress }}%</p>
     }
 
-
+    @if (errorMessage) {
+        <div>
+          <p style="color: red;">{{ errorMessage }}</p>
+        </div>
+      }
+      
+      @if (resultUrl) {
+        <div>
+          @switch (resultType) {
+            @case ('image') {
+              <img [src]="resultUrl" alt="Annotated image" />
+            }
+            @case ('video') {
+              <video [src]="resultUrl" controls></video>
+            }
+          }
+        </div>
+      }
 
 </div>

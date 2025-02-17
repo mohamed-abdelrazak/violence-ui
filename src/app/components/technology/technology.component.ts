@@ -12,6 +12,8 @@ export class TechnologyComponent {
   selectedFile: File | null = null;
   uploadProgress: number | null = null;
   errorMessage: string | null = null;
+  resultUrl: string | null = null;
+  resultType: 'video' | 'image' | null = null;
 
   constructor(private uploadService: UploadService) {}
 
@@ -29,6 +31,13 @@ export class TechnologyComponent {
 
     this.selectedFile = file;
     this.errorMessage = null;
+    this.resultUrl = null;
+
+    if (file.type.startsWith('image/')) {
+      this.resultType = 'image';
+    } else if (file.type.startsWith('video/')) {
+      this.resultType = 'video';
+    }
   }
 
   validateFile(file: File): boolean {
@@ -53,8 +62,10 @@ export class TechnologyComponent {
       if (event.type === HttpEventType.UploadProgress && event.total) {
         this.uploadProgress = Math.round((100 * event.loaded) / event.total);
       } else if (event.type === HttpEventType.Response) {
-        console.log('Upload success:', event.body);
+        const blob = event.body;
+        this.resultUrl = URL.createObjectURL(blob);
         this.uploadProgress = null;
+        console.log('Upload success:', event.body);
       }
     });
   }
