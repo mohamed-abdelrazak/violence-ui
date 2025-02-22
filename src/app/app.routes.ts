@@ -7,6 +7,10 @@ import { TechnologyComponent } from './components/technology/technology.componen
 import { SignupComponent } from './components/signup/signup.component';
 import { AdminComponent } from './layouts/admin/admin.component';
 import { UserComponent } from './layouts/user/user.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { UsersComponent } from './components/users/users.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { ReportsComponent } from './components/reports/reports.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -16,7 +20,13 @@ export const routes: Routes = [
   { path: 'signup', component: SignupComponent },
 
   // Admin Routes
-  { path: 'admin', component: AdminComponent, children: [] },
+  { path: 'admin', component: AdminComponent, children: [
+    { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+    { path: 'dashboard', component: DashboardComponent },
+    { path: 'users', component: UsersComponent },
+    { path: 'settings', component: SettingsComponent },
+    { path: 'reports', component: ReportsComponent },
+  ] },
 
   // User Routes
   {
